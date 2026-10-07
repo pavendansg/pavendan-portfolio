@@ -813,7 +813,7 @@ $('#apt').src=PORTRAIT;
 /* get in touch: wire links from PROFILE only; empty entries stay inert */
 $$('#end [data-k],#ft [data-k]').forEach(a=>{const k=a.dataset.k,v=PROFILE[k];
   if(!v){a.classList.add('dis');a.setAttribute('aria-disabled','true');a.removeAttribute('data-cursor');a.removeAttribute('href');const sp=a.querySelector('.ts');if(sp)sp.textContent='Link coming soon';return}
-  a.href=k==='email'?'mailto:'+v:v;if(k==='resume'){a.setAttribute('download','Pavendan_SG_ATS_Resume_v3.pdf')}else if(k!=='email'){a.target='_blank';a.rel='noopener'}});
+  a.href=k==='email'?'mailto:'+v:v;if(k==='resume'){a.setAttribute('download','Pavendan-Resume.pdf')}else if(k!=='email'){a.target='_blank';a.rel='noopener'}});
 {const c=$('#touch-cta');if(PROFILE.email)c.href='mailto:'+PROFILE.email;else{c.href='#contact';c.addEventListener('click',e=>{e.preventDefault();lenis.scrollTo('#contact',{duration:1.1,lock:true,force:true,onComplete:()=>ScrollTrigger.update()})})}}
 /* about links from PROFILE */
 [['GitHub','github'],['LinkedIn','linkedin'],['Email','email'],['Phone','phone'],['Resume','resume']].forEach(([l,k])=>{const v=PROFILE[k],a=document.createElement('a');a.textContent=l;a.dataset.cursor='link';
